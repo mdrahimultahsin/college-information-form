@@ -10,14 +10,10 @@ const studentRoutes = require('./routes/studentRoutes');
 const app = express();
 
 // Middleware
-// app.use(cors());
-app.use(cors({
-  origin: 'https://student-information1.netlify.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(cors());
 
-app.options('*', cors());
+
+
 
 app.use(express.json());
 
